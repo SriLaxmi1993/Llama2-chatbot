@@ -18,6 +18,7 @@ with st.sidebar:
     if replicate_api:
         if not (replicate_api.startswith('r8_') and len(replicate_api)==40):
             st.warning('Please enter your credentials!', icon='⚠️')
+            st.write('create your Replicate API token here : https://replicate.com/')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
             os.environ['REPLICATE_API_TOKEN'] = replicate_api
